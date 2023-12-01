@@ -405,17 +405,17 @@ class DLL{
 		}
 		// 7 check palindrome
   bool isPalindrome() {
-    // Initialize two pointers, slow and fast, to the head of the list
+    
     Node2* slow = head;
     Node2* fast = head;
 
-    // Move the fast pointer to the end of the list
+    
     while (fast && fast->next) {
       slow = slow->next;
       fast = fast->next->next;
     }
 
-    // Compare the first half of the list with the second half in reverse
+    
     Node2* curr = slow;
     Node2* prev = nullptr;
     while (curr) {
@@ -438,7 +438,7 @@ class DLL{
       secondHalf = secondHalf->next;
     }
 
-    // Restore the original order of the second half
+    
     curr = prev;
     prev = nullptr;
     while (curr) {
